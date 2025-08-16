@@ -1,19 +1,28 @@
-import random
 import tkinter as tk
+from tkinter import messagebox
 import string
 import pyperclip
 import secrets
 
 def gerarSenha():
-    tamanho_senha = int(tamanho.get());
+    try:
+        tamanho_senha = int(tamanho.get());
+        if tamanho_senha <= 0:
+            messagebox.showerror("Erro", "Digite um número inteiro positivo.")
+            return
+    except ValueError:
+        messagebox.showerror("Erro", "Digite apenas números inteiros.")
+        return
+    
     caracteres = string.ascii_letters + string.digits + string.punctuation;
-    senha = ''.join(random.choice(caracteres) for _ in range(tamanho_senha))
+    senha = ''.join(secrets.choice(caracteres) for _ in range(tamanho_senha))
     saida.delete(0, tk.END);
     saida.insert(0, senha);
 
 def copiar():
     senha_gerada = saida.get();
     pyperclip.copy(senha_gerada);
+    messagebox.showinfo("Copiado", "Senha copiada para a área de transferência!");
 
 
 janela = tk.Tk();
@@ -35,5 +44,6 @@ janela.mainloop();
 #Gerando números de senhas aleatórios
 #numeros = secrets.choice(range(0, 100))
 #print(secrets.token_hex(10))
+
 
 
