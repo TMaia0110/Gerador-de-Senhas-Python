@@ -36,7 +36,7 @@ O programa permite que o usuário defina o tamanho da senha desejada, gere uma s
 
 1. **Clonar o repositório**  
 ```bash
-git clone https://github.com/seu-usuario/gerador-senhas.git
+git clone https://github.com/TMaia0110/Gerador-de-Senhas-Python.git
 Acessar a pasta do projeto
 
 bash
