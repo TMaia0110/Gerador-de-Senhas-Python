@@ -18,6 +18,17 @@ O programa permite que o usuário defina o tamanho da senha desejada, gere uma s
 
 ---
 
+🧠 Conceitos Aplicados
+
+- Manipulação de strings
+- Uso de bibliotecas padrão do Python
+- Geração de números aleatórios
+- Criação de interface gráfica com Tkinter
+- Interação com a área de transferência
+- Validação de entrada do usuário
+
+---
+
 ## 🛠 Tecnologias Utilizadas
 - **Python 3**
 - **Tkinter** – Interface gráfica.
